@@ -30,7 +30,7 @@ jobs:
       run: |
         docker build -t netflix-backend:latest .
     - name: Docker push
-      run: 
+      run: |
         docker push ${{ steps.login-ecr.outputs.registry }}/netflix-backend:v${GITHUB_RUN_NUMBER}
 
     
